@@ -22,6 +22,7 @@ public class KeycloakAccessTokenExample {
         // Create the HTTP client and post the request
         HttpClient httpClient = HttpClients.createDefault();
         HttpPost httpPost = new HttpPost(serverUrl);
+        //web client committing
 
         try {
             httpPost.setEntity(new StringEntity(requestBody));
