@@ -13,8 +13,8 @@ public class KeycloakAccessTokenExample {
     public static void main(String[] args) {
         // Keycloak server details
         String serverUrl = "http://your-keycloak-server/auth/realms/your-realm/protocol/openid-connect/token";
-        String clientId = "your-client-id";
-        String clientSecret = "your-client-secret";
+        String clientId = "eazybankapi";
+        String clientSecret = "OlxWbU84txo6bEuTHxxNKxS9ooxpv4Ie";
 
         // Request body
         String requestBody = "grant_type=client_credentials&client_id=" + clientId + "&client_secret=" + clientSecret;
