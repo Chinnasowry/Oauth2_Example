@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Keycloak Frontend</title>
+</head>
+<body>
+<h1>Keycloak Frontend Example</h1>
+<div id="root"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/keycloak/15.0.2/keycloak.min.js"></script>
+<script>
+        const keycloak = new Keycloak({
+            url: '<your-keycloak-url>/auth',
+            realm: '<your-realm>',
+            clientId: '<your-client-id>'
+        });
+
+        keycloak.init({
+            onLoad: 'login-required'
+        }).then(function(authenticated) {
+            if (authenticated) {
+                console.log("User is authenticated.");
+                // Perform any authenticated actions here
+            } else {
+                console.log("User is not authenticated.");
+            }
+        }).catch(function() {
+            console.error("Error initializing Keycloak.");
+        });
+    </script>
+</body>
+</html>
